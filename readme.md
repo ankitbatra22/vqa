@@ -11,20 +11,20 @@ Add it to the `requirements/requirements.in` file and run `make generate_new_req
 ## Components
 
 ### Main Scripts
-`scripts/train.py`: Main entry point for running the training process.
-`scripts/inference.py`: Run inference on provided image and question
-`scripts/prepare_data.py`: Data generation pipeline
-`scripts/evaluate.py`: Run evaluation on test date. 
+- `scripts/train.py`: Main entry point for running the training process.
+- `scripts/inference.py`: Run inference on provided image and question
+- `scripts/prepare_data.py`: Data generation pipeline
+- `scripts/evaluate.py`: Run evaluation on test date. 
 
 Usage should look something like:
 
-`python scripts/prepare_data.py --config configs/config.yaml`
+Data Prep: `python scripts/prepare_data.py --config configs/config.yaml`
 
-`python scripts/train.py --config config/config.yaml`
+Training: `python scripts/train.py --config config/config.yaml`
 
-`python scripts/evaluate.py --model-path checkpoints/best_model.pt --test-data data/processed/test`
+Evaluation: `python scripts/evaluate.py --model-path checkpoints/best_model.pt --test-data data/processed/test`
 
-`python scripts/predict.py --model-path checkpoints/best_model.pt --image path/to/image.jpg --question "What abnormality is visible?"`
+Inference: `python scripts/predict.py --model-path checkpoints/best_model.pt --image path/to/image.jpg --question "What abnormality is visible?"`
 
 
 ### Config File Example (Placeholder)
