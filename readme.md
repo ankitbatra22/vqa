@@ -18,13 +18,10 @@ Add it to the `requirements/requirements.in` file and run `make generate_new_req
 
 Usage should look something like:
 
-Data Prep: `python scripts/prepare_data.py --config configs/config.yaml`
-
-Training: `python scripts/train.py --config config/config.yaml`
-
-Evaluation: `python scripts/evaluate.py --model-path checkpoints/best_model.pt --test-data data/processed/test`
-
-Inference: `python scripts/predict.py --model-path checkpoints/best_model.pt --image path/to/image.jpg --question "What abnormality is visible?"`
+- Data Prep: `python scripts/prepare_data.py --config configs/config.yaml`
+- Training: `python scripts/train.py --config config/config.yaml`
+- Evaluation: `python scripts/evaluate.py --model-path checkpoints/best_model.pt --test-data data/processed/test`
+- Inference: `python scripts/predict.py --model-path checkpoints/best_model.pt --image path/to/image.jpg --question "What abnormality is visible?"`
 
 
 ### Config File Example (Placeholder)
