@@ -23,6 +23,24 @@ Usage should look something like:
 - Evaluation: `python scripts/evaluate.py --model-path checkpoints/best_model.pt --test-data data/processed/test`
 - Inference: `python scripts/predict.py --model-path checkpoints/best_model.pt --image path/to/image.jpg --question "What abnormality is visible?"`
 
+### src/ folder
+The `src` folder contains the core model implementation and training code:
+
+- `src/data/`: Data loading and preprocessing (TODO)
+    - Things like custom dataset data loader, data generation, building dataset.
+
+- `src/model/`: Model architecture implementations (TODO)
+  - `encoder.py`: Vision backbone (ResNet, ViT etc.)
+  - `text_encoder.py`: Text encoder (BERT, RoBERTa etc.)  (TODO MAYBE)
+  - `fusion.py`: Cross-modal fusion modules (might need something like this)
+  - `vqa_model.py`: Main VQA model combining all components (what we will use to train)
+
+- `src/training/`: Training related code
+  - `trainer.py`: Main trainer class handling training loop
+  - `loss.py`: Loss function implementations
+
+- `src/utils/`: General utilities
+
 
 ### Config File Example (Placeholder)
 
