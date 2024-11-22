@@ -69,6 +69,8 @@ jinja2==3.1.4
     # via torch
 jiter==0.7.1
     # via openai
+kagglehub==0.3.4
+    # via -r requirements/requirements.in
 kiwisolver==1.4.7
     # via matplotlib
 markupsafe==3.0.2
@@ -109,6 +111,8 @@ packaging==24.2
     #   huggingface-hub
     #   matplotlib
     #   onnxruntime
+pandas==2.2.3
+    # via -r requirements/requirements.in
 pathspec==0.12.1
     # via black
 pillow==11.0.0
@@ -143,6 +147,8 @@ safetensors==0.4.5
     # via
     #   open-clip-torch
     #   timm
+scikit-learn==1.5.2
+    # via -r requirements/requirements.in
 six==1.16.0
     # via python-dateutil
 sniffio==1.3.1
