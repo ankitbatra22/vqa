@@ -8,3 +8,6 @@ onnxruntime
 onnx
 pycocotools
 open_clip_torch
+kagglehub
+scikit-learn
+pandas
