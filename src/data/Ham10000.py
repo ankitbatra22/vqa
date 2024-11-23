@@ -6,10 +6,13 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import train_test_split
 import kagglehub
 import pandas as pd
+from PIL import Image
+import numpy as np
 
 class Ham10000(Dataset):
     def __init__(self, df, transform=None):
         self.df = df
+        self.data_array = df.to_numpy()
         self.transform = transform
     
     def __len__(self):
@@ -17,8 +20,8 @@ class Ham10000(Dataset):
 
     def __getitem__(self, index):
         # Load data and get label
-        X = Image.open(self.df['path'][index])
-        y = torch.tensor(int(self.df['cell_type_idx'][index]))
+        X = Image.fromarray(np.uint8(self.data_array[index,:-1].reshape(28,28,3)))
+        y = torch.tensor(int(self.data_array[index, -1]))
 
         if self.transform:
             X = self.transform(X)
